@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+body
+{
+ text-align:center;
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ background-image: url('theatre1.jpg');
+ background-position:center;
+ background-repeat: no-repeat;
+background-size: 100%;  
+margin-top: -10px;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:1000px;
+}
+#effect
+{
+ position:relative;	
+ width:95%;
+ height:380px;
+ margin:auto;
+ box-shadow:0px 0px 6px 2px #830000;
+ margin-top:62px;
+ background:rgb(17, 1, 1);
+}
+#effect h1
+{
+ line-height:8.1em;
+ margin:auto;
+ font-size:50px;
+ color:#525252;
+}
+#curtain1
+{
+ top:0px;
+ position:absolute;
+ left:0px;
+ height:380px;
+}
+#curtain2
+{   
+ top:0px;
+ position:absolute;
+ height:380px;
+ right:0px;
+}
+#curtain_buttons input[type="button"]
+{
+ margin-top:50px;
+ width:150px;
+ height:45px;
+ border-radius:5px;
+ color:black;
+ background-color:red;
+ border:none;
+ border-bottom:6px solid black;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+function open_curtain()
+{
+ $("#curtain1").animate({width:30},3000);
+ $("#curtain2").animate({width:30},3000);
+}
+function close_curtain()
+{
+ $("#curtain1").animate({width:500},2500);
+ $("#curtain2").animate({width:500},2500);
+}
+function myFunction() {
+  location.replace("loginpage.html");
+}
+</script>
+</head>
+<body>
+<div id="wrapper" >
+
+<div id="effect">
+ <img src="logo.png" style="margin-top: 50px ;">
+ <img src="redcurtain.jpeg" id="curtain1">
+ <img src="redcurtain.jpeg" id="curtain2">
+
+<div id="curtain_buttons">
+ <input type="button" value="OPEN CURTAIN" onclick="open_curtain();">
+ <input type="button" value="Watch Now" onclick="myFunction();">
+ <input type="button" value="CLOSE CURTAIN" onclick="close_curtain();">
+</div>
+
+</div>
+</body>
+</html>
